@@ -1,8 +1,10 @@
 USED AS WORKLOAD IN GEM5 WITH CACHE CONFIGURATIONS: L1D$=32KB (4 WAY), L1I$=32KB (4 WAY),  L2$=256KB (8 WAY):
 Ran For 200M instructions without fast-forward option:
+
 build/X86/gem5.opt configs/example/se.py -c gapbs/bc -o '-g 20 -n 1' --caches --l1d_size='32kB' --l1i_size='32kB' --l1d_assoc='4' --l1i_assoc='4' --cacheline_size='64' --l2cache --l2_size='256kB' --l2_assoc='8' --cpu-type='DerivO3CPU' -I 200000000![image](https://user-images.githubusercontent.com/93178835/157320821-61ff4005-4cad-4493-9f29-33b9afaecb35.png)
 
-
+GEM5 stats:
+IPC: 1.686126, L1D$ miss rate: 0.001667, L1I$ miss rate: 0.000126
 
 GAP Benchmark Suite [![Build Status](https://github.com/sbeamer/gapbs/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/sbeamer/gapbs/actions/workflows/c-cpp.yml)
 ===================
